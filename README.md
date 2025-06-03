@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# # Closet Store App 🛍️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive content listing platform with filters, infinite scroll, and keyword search — built with React and Redux Toolkit.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone "repo-url"
+cd closet-store
+
+### 2. Install dependencies
+npm install
+
 
 ## Available Scripts
 
@@ -11,13 +24,9 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -39,32 +48,30 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Tech Stack and Justification:
+1. Redux Toolkit
+Used for scalable state management. createSlice simplifies reducers and actions, while configureStore helps with store setup.
 
-### Code Splitting
+Why Redux?
+It enables a single source of truth and predictable state transitions, making search + filter + pagination logic clean and composable.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. React Router
+Allows for future extensibility if multiple pages are needed (e.g., content details page). Currently used to handle route-based rendering.
 
-### Analyzing the Bundle Size
+3. IntersectionObserver API
+Implemented via useRef and useCallback for efficient infinite scroll loading. No need for large external packages like react-infinite-scroll.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Functional Components + Hooks
+Used useEffect, useState, and useSelector / useDispatch for a modern, cleaner React style — avoiding class-based complexity.
 
-### Making a Progressive Web App
+5. Vanilla CSS
+Used a custom index.css file with minimal design system to maintain full styling control and performance.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🎨 Responsive Design
+Mobile-first approach with auto-fill grid
 
-### Advanced Configuration
+Interactive hover effects for cards
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Simple, clean, and accessible UI
